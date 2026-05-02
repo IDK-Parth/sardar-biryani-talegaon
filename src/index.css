@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-brand-primary: #6f3325;
+  --color-brand-secondary: #904d00;
+  --color-brand-surface: #fff8f6;
+  --color-brand-on-surface: #241916;
+  --color-brand-outline: #d9c1bc;
+  
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-surface text-brand-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.spice-gradient {
+  background: linear-gradient(to right, #6f3325, #8c4a3a);
+}
+
+.glass-nav {
+  @apply bg-[#fff8f6]/70 backdrop-blur-md;
+}
